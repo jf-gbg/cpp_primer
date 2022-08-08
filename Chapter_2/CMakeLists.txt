@@ -3,4 +3,4 @@ project(Chapter_2)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Chapter_2 main.cpp)
+add_executable(Chapter_2 main.cpp headers/Sales_data.h)

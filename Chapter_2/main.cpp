@@ -1,12 +1,7 @@
 #include <iostream>
 #include <string>
-//#include "Sales_data.h"
+#include "headers/Sales_data.h"
 
-struct Sales_data {
-    std::string bookNo;
-    unsigned units_sold = 0;
-    double revenue = 0.0;
-};
 
 void ex1_20() {
     Sales_data item;
@@ -111,7 +106,27 @@ int main() {
 //                    << std::endl;
 //        return -1; //indicate failure
 //    }
+    Sales_data data1, data2;
+    double price1, price2;
 
-    ex1_23();
+    std::cin >> data1.bookNo >> data1.units_sold >> price1;
+    std::cin >> data2.bookNo >> data2.units_sold >> price2;
+
+    if (data1.bookNo == data2.bookNo)
+    {
+        data1.revenue = data1.units_sold * price1;
+        data2.revenue = data2.units_sold * price2;
+
+        Sales_data outputData;
+        outputData.bookNo = data1.bookNo;
+        outputData.revenue = data1.revenue + data2.revenue;
+        outputData.units_sold = data1.units_sold + data2.units_sold;
+
+        double averagePrice = outputData.revenue / outputData.units_sold;
+
+        std::cout << outputData.bookNo << '\n' << outputData.revenue
+            << '\n' << outputData.units_sold << '\n' << averagePrice << '\n';
+    }
+
     return 0;
 }
