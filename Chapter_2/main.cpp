@@ -2,12 +2,15 @@
 #include <string>
 #include "headers/Sales_data.h"
 
+using std::cin;
+using std::cout;
+
 
 void ex1_20() {
     Sales_data item;
     int price = 0;
-    while(std::cin >> item.bookNo >> item.units_sold >> price) {
-        std::cout << item.bookNo << item.units_sold << price << '\n';
+    while(cin >> item.bookNo >> item.units_sold >> price) {
+        cout << item.bookNo << item.units_sold << price << '\n';
     }
 };
 
@@ -15,7 +18,7 @@ void ex1_21() {
     Sales_data currentBook, totalBook;
     double currentPrice = 0, averagePrice = 0;
     for (int i = 0; i < 2; ++i) {
-        std::cin >> currentBook.bookNo >> currentBook.units_sold >> currentPrice;
+        cin >> currentBook.bookNo >> currentBook.units_sold >> currentPrice;
         totalBook.bookNo = currentBook.bookNo;
         totalBook.units_sold += currentBook.units_sold;
         totalBook.revenue += currentBook.units_sold * currentPrice;
@@ -23,7 +26,7 @@ void ex1_21() {
     }
 
     averagePrice /= 2;
-    std::cout << totalBook.bookNo << '\n' << totalBook.units_sold
+    cout << totalBook.bookNo << '\n' << totalBook.units_sold
         << '\n' << totalBook.revenue << '\n' << averagePrice << '\n';
 }
 
@@ -31,17 +34,17 @@ void ex1_22() {
     Sales_data currentBook, totalBook;
     double currentPrice = 0;
     int i = 0;
-    while (std::cin >> currentBook.bookNo >> currentBook.units_sold >> currentPrice) {
-        std::cout << i << '\n';
+    while (cin >> currentBook.bookNo >> currentBook.units_sold >> currentPrice) {
+        cout << i << '\n';
         totalBook.bookNo = currentBook.bookNo;
         totalBook.units_sold += currentBook.units_sold;
         totalBook.revenue += currentBook.units_sold * currentPrice;
         i++;
     }
 
-    std::cout << "outside loop";
+    cout << "outside loop";
     double averagePrice = totalBook.revenue / totalBook.units_sold;
-    std::cout << totalBook.bookNo << '\n' << totalBook.units_sold
+    cout << totalBook.bookNo << '\n' << totalBook.units_sold
               << '\n' << totalBook.revenue << '\n' << averagePrice << '\n';
 }
 
@@ -54,17 +57,17 @@ void ex1_23() {
     Sales_data currentBook, totalBook;
     double currentPrice = 0, averagePrice;
 
-    std::cin >> currentBook.bookNo >> currentBook.units_sold >> currentPrice;
+    cin >> currentBook.bookNo >> currentBook.units_sold >> currentPrice;
     totalBook.bookNo = currentBook.bookNo;
     totalBook.units_sold += currentBook.units_sold;
     totalBook.revenue += currentBook.units_sold * currentPrice;
 
-    while (std::cin >> currentBook.bookNo >> currentBook.units_sold >> currentPrice) {
+    while (cin >> currentBook.bookNo >> currentBook.units_sold >> currentPrice) {
         if (currentBook.bookNo != totalBook.bookNo)
         {
             averagePrice = totalBook.revenue / totalBook.units_sold;
 
-            std::cout << "-------" << '\n' << totalBook.bookNo << '\n' << totalBook.units_sold
+            cout << "-------" << '\n' << totalBook.bookNo << '\n' << totalBook.units_sold
                       << '\n' << totalBook.revenue << '\n' << averagePrice << '\n';
             currentPrice = 0.0;
             totalBook.units_sold = 0.0;
@@ -76,7 +79,7 @@ void ex1_23() {
     }
 
     averagePrice = totalBook.revenue / totalBook.units_sold;
-    std::cout << "-------" << '\n' << totalBook.bookNo << '\n' << totalBook.units_sold
+    cout << "-------" << '\n' << totalBook.bookNo << '\n' << totalBook.units_sold
               << '\n' << totalBook.revenue << '\n' << averagePrice << '\n';
 }
 
@@ -84,33 +87,33 @@ int main() {
 //    Sales_data data1, data2;
 //
 //    double price = 0;
-//    std::cin >> data1.bookNo >> data1.units_sold >> price;
+//    cin >> data1.bookNo >> data1.units_sold >> price;
 //    data1.revenue = data1.units_sold * price;
 //
-//    std::cin >> data2.bookNo >> data2.units_sold >> price;
+//    cin >> data2.bookNo >> data2.units_sold >> price;
 //    data2.revenue = data2.units_sold * price;
 //
 //    if (data1.bookNo == data2.bookNo) {
 //        unsigned totalCnt = data1.units_sold + data2.units_sold;
 //        double totalRevenue = data1.revenue + data2.revenue;
 //        // print: ISBN, total revenue, average price per book
-//        std::cout << data1.bookNo << " " << totalCnt
+//        cout << data1.bookNo << " " << totalCnt
 //            << " " << totalRevenue << " ";
 //        if (totalCnt != 0)
-//            std::cout << totalRevenue/totalCnt << std::endl;
+//            cout << totalRevenue/totalCnt << endl;
 //        else
-//            std::cout << "(no sales)" << std::endl;
+//            cout << "(no sales)" << endl;
 //        return 0; // indicate success
 //    } else { // transactions weren't for the same ISBN
-//        std::cerr << "Data must refer to the same ISBN"
-//                    << std::endl;
+//        cerr << "Data must refer to the same ISBN"
+//                    << endl;
 //        return -1; //indicate failure
 //    }
     Sales_data data1, data2;
     double price1, price2;
 
-    std::cin >> data1.bookNo >> data1.units_sold >> price1;
-    std::cin >> data2.bookNo >> data2.units_sold >> price2;
+    cin >> data1.bookNo >> data1.units_sold >> price1;
+    cin >> data2.bookNo >> data2.units_sold >> price2;
 
     if (data1.bookNo == data2.bookNo)
     {
@@ -124,7 +127,7 @@ int main() {
 
         double averagePrice = outputData.revenue / outputData.units_sold;
 
-        std::cout << outputData.bookNo << '\n' << outputData.revenue
+        cout << outputData.bookNo << '\n' << outputData.revenue
             << '\n' << outputData.units_sold << '\n' << averagePrice << '\n';
     }
 
