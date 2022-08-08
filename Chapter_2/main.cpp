@@ -50,6 +50,41 @@ void ex1_22() {
               << '\n' << totalBook.revenue << '\n' << averagePrice << '\n';
 }
 
+Sales_data GetNewTotalBook () {
+    Sales_data totalBook;
+    return totalBook;
+}
+
+void ex1_23() {
+    Sales_data currentBook, totalBook;
+    double currentPrice = 0, averagePrice;
+
+    std::cin >> currentBook.bookNo >> currentBook.units_sold >> currentPrice;
+    totalBook.bookNo = currentBook.bookNo;
+    totalBook.units_sold += currentBook.units_sold;
+    totalBook.revenue += currentBook.units_sold * currentPrice;
+
+    while (std::cin >> currentBook.bookNo >> currentBook.units_sold >> currentPrice) {
+        if (currentBook.bookNo != totalBook.bookNo)
+        {
+            averagePrice = totalBook.revenue / totalBook.units_sold;
+
+            std::cout << "-------" << '\n' << totalBook.bookNo << '\n' << totalBook.units_sold
+                      << '\n' << totalBook.revenue << '\n' << averagePrice << '\n';
+            currentPrice = 0.0;
+            totalBook.units_sold = 0.0;
+            totalBook.revenue = 0.0;
+        }
+        totalBook.bookNo = currentBook.bookNo;
+        totalBook.units_sold += currentBook.units_sold;
+        totalBook.revenue += currentBook.units_sold * currentPrice;
+    }
+
+    averagePrice = totalBook.revenue / totalBook.units_sold;
+    std::cout << "-------" << '\n' << totalBook.bookNo << '\n' << totalBook.units_sold
+              << '\n' << totalBook.revenue << '\n' << averagePrice << '\n';
+}
+
 int main() {
 //    Sales_data data1, data2;
 //
@@ -77,6 +112,6 @@ int main() {
 //        return -1; //indicate failure
 //    }
 
-    ex1_22();
+    ex1_23();
     return 0;
 }
