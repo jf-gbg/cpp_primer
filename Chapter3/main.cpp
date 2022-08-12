@@ -11,9 +11,20 @@ using std::isspace;
 
 int main() {
     string s = "hello";
-    for (auto &c : s) {
-        c = 'X';
+    for (auto c : s) {
+        s[c] = 'X';
     }
+
+    for (decltype(s.size()) index = 0; index < s.size(); index++) {
+        s[index] = 'X';
+    }
+
+    decltype(s.size()) index = 0;
+    while (index < s.size()) {
+        s[index] = 'X';
+        index++;
+    }
+
     cout << s << endl;
 
     return 0;
