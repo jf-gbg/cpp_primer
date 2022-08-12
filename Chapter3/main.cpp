@@ -10,22 +10,20 @@ using std::string;
 using std::isspace;
 
 int main() {
-    string s = "hello";
-    for (auto c : s) {
-        s[c] = 'X';
+    string s = "h!e,,.ll;/o";
+    string sOut = "";
+
+    for (auto &c : s) {
+        if (!ispunct(c))
+            sOut += c;
     }
 
-    for (decltype(s.size()) index = 0; index < s.size(); index++) {
-        s[index] = 'X';
-    }
+//    for (decltype(s.size()) index = 0; index < s.length(); index++) {
+//        if (!ispunct(s[index]))
+//            sOut += s[index];
+//    }
 
-    decltype(s.size()) index = 0;
-    while (index < s.size()) {
-        s[index] = 'X';
-        index++;
-    }
-
-    cout << s << endl;
+    cout << sOut << endl;
 
     return 0;
 }
