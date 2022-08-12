@@ -6,13 +6,15 @@ using std::endl;
 #include <string>
 using std::string;
 
-int main() {
-    string s1, s2;
+#include <cctype>
+using std::isspace;
 
-    while (cin >> s1) {
-        s2 += s1 + " ";
-        cout << s2 << endl;
+int main() {
+    string s = "hello";
+    for (auto &c : s) {
+        c = 'X';
     }
+    cout << s << endl;
 
     return 0;
 }
