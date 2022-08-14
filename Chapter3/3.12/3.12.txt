@@ -1,0 +1,5 @@
+Which, if any, of the following vector definitions are in error? For those that are legal, explain what the
+definition does. For those that are not legal, explain why they are illegal.
+(a) vector<vector<int>> ivec; - legal, create a vector of vectors that store int objects.
+(b) vector<string> svec = ivec; - not legal, svec takes objects of type string and ivec takes objects of type vector.
+(c) vector<string> svec(10, "null"); legal, create a vector with 10 string objects, all of which have a value of "null".
