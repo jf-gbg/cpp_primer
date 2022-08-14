@@ -13,11 +13,11 @@ using std::isspace;
 using std::vector;
 
 int main() {
-    vector<int> ints;
-    int input;
+    vector<string> strings;
+    string word;
 
-    while(cin >> input)
-        ints.push_back(input);
+    while (cin >> word)
+        strings.push_back(word);
 
     return 0;
 }
