@@ -3,16 +3,10 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-#include <string>
-using std::string;
-
-#include <cctype>
-using std::isspace;
-
 #include <vector>
 using std::vector;
 
-int main() {
+int problem314() {
     vector<int> ints;
     int input;
 
