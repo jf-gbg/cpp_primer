@@ -12,7 +12,7 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-int main() {
+int problem317() {
     string word;
     vector<string> words;
 
