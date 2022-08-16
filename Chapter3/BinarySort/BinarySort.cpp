@@ -12,9 +12,9 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-int main() {
+int BinarySort() {
     vector<string> text {"a", "b", "c", "d", "e", "f",
-                    "g", "h", "i", "j", "k", "l", "m"};
+                         "g", "h", "i", "j", "k", "l", "m"};
     string sought = "m";
     auto beg = text.begin(), end = text.end();
     auto mid = text.begin() + (end - beg)/2;
