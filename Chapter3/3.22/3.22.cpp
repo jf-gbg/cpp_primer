@@ -9,7 +9,7 @@ using std::string;
 #include <vector>
 using std::vector;
 
-int main() {
+int exercise322() {
     vector<string> text {"buzzwords", "cicero", "classic", "client kafka", "office", "", "pulpfiction"};
 
     for (auto it = text.begin();

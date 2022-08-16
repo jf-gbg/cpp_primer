@@ -12,7 +12,7 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-int main() {
+int exercise323() {
     vector<int> ivec;
     for (decltype(ivec.size()) i = 1; i != 11; ++i) {
         ivec.push_back(i);
