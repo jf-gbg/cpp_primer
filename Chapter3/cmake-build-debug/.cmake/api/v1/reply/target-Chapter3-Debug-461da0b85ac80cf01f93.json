@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Chapter3.exe"
-		},
-		{
-			"path" : "Chapter3.pdb"
+			"path" : "Chapter3"
 		}
 	],
 	"backtrace" : 1,
@@ -38,10 +35,10 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g"
+					"fragment" : "-g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.0"
 				},
 				{
-					"fragment" : "-std=gnu++20"
+					"fragment" : "-std=gnu++2a"
 				}
 			],
 			"language" : "CXX",
@@ -71,16 +68,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "Chapter3",
-	"nameOnDisk" : "Chapter3.exe",
+	"nameOnDisk" : "Chapter3",
 	"paths" : 
 	{
 		"build" : ".",
