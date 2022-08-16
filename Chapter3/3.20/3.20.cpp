@@ -6,13 +6,10 @@ using std::endl;
 #include <string>
 using std::string;
 
-#include <cctype>
-using std::isspace;
-
 #include <vector>
 using std::vector;
 
-int main() {
+int problem320() {
     vector<int> ivec {3, 5, 7, 2, 6, 4, 9, 9};
 
     //forward 8, 9, 10, 18
