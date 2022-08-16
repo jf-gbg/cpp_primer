@@ -1,0 +1,13 @@
+Is the following program legal? If not, how might you fix it?
+
+vector<int> ivec;
+ivec[0] = 42;
+
+The program will compile but ivec has not been initialized so has no element
+at position 0. Running this program will cause a buffer overflow and result
+in an error at runtime. Possible other solutions are below:
+
+vector<int> ivec (1, 42);
+vector<int> ivec {42};
+vector<int> ivec;
+ivec.push_back(42);
