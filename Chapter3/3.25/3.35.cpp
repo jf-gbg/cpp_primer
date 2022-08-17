@@ -12,7 +12,7 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-int main() {
+int exercise325() {
     vector<unsigned> scores (11, 0);
     unsigned grade;
     int n = 0;
@@ -23,7 +23,7 @@ int main() {
             n = grade / 10;
             i = 0;
             for(auto beg = scores.begin();
-            beg != scores.end(); beg++, i++) {
+                beg != scores.end(); beg++, i++) {
                 if(i == n) {
                     ++*beg;
                 }
@@ -37,18 +37,3 @@ int main() {
 
     return 0;
 }
-
-//42
-//65
-//95
-//100
-//39
-//67
-//95
-//76
-//88
-//76
-//83
-//92
-//76
-//93
