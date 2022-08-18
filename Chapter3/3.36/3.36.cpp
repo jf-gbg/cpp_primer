@@ -15,7 +15,7 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-int main() {
+int Exercise336() {
     int ia[] {2,4,6,8,10};
     int ia2[] {2,4,6,8,10};
     vector<int> ivec {2,4,6,8,10,12};
