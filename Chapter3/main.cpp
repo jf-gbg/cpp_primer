@@ -12,14 +12,30 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
+string sa[10];
+int ia[10];
+
 int main() {
-    constexpr unsigned buf_size = 1024;
-    int ia[buf_size];
-    //int ia[4 * 7 - 14];
 
-    char st[11] = "fundamenta";
+    string sa2[10];
+    string ia2[10];
 
-
+    cout<< "sa" << endl;
+    for (auto s : sa) {
+        cout << s << endl;
+    }
+    cout << "ia" << endl;
+    for (auto i : ia) {
+        cout << i << endl;
+    }
+    cout << "sa2" << endl;
+    for (auto s : sa2) {
+        cout << s << endl;
+    }
+    cout << "ia2" << endl;
+    for (auto i : ia2) {
+        cout << i << endl;
+    }
     return 0;
 }
 

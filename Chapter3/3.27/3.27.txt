@@ -6,6 +6,6 @@ unsigned buf_size = 1024;
 (c) int ia[txt_size()]; //illegal, txt_size() is not a constexpr function so the result may not be produced at
 compile time
 (d) char st[11] = "fundamental"; //illegal, char array needs an empty character at end. Fundemental is 11 characters,
-so one too long. 
+so one too long.
 
 Lippman, Stanley B.; Stanley Lippman; Barbara Moo. C++ Primer (p. 115). Pearson Education. Kindle Edition.

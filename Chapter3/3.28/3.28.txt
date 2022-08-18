@@ -1,0 +1,9 @@
+Exercise 3.28: What are the values in the following arrays?
+string sa[10]; //array of 10 empty strings
+int ia[10]; //global scope, array of 10 ints set to 0
+int main() {
+    string sa2[10]; //array of 10 empty strings
+    int    ia2[10]; //local scope array of 10 ints which are undefined
+}
+
+Lippman, Stanley B.; Stanley Lippman; Barbara Moo. C++ Primer (p. 115). Pearson Education. Kindle Edition.
