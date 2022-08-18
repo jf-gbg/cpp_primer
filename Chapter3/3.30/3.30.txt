@@ -1,0 +1,11 @@
+Exercise 3.30: Identify the indexing errors in the following code:
+
+constexpr size_t array_size = 10;
+int ia[array_size];
+for (size_t ix = 1; ix <= array_size; ++ix)
+    ia[ix] = ix;
+
+//ix starts on 1 not 0 so will miss the first element.
+//use of <= means ix will reach element 10 which is outside the bounds of the array
+
+Lippman, Stanley B.; Stanley Lippman; Barbara Moo. C++ Primer (p. 117). Pearson Education. Kindle Edition.
