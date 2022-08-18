@@ -11,10 +11,7 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-string sa[10];
-int ia[10];
-
-int main() {
+int Exercise335() {
     int ia[] = {0,2,4,6,8};
     int *beg = begin(ia);
     int *last = end(ia);
