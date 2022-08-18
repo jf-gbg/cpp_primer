@@ -13,27 +13,12 @@ using std::isspace;
 using std::vector;
 
 int main() {
-    vector<unsigned> scores (11, 0);
-    unsigned grade;
-    int n = 0;
-    int i = 0;
+    constexpr unsigned buf_size = 1024;
+    int ia[buf_size];
+    //int ia[4 * 7 - 14];
 
-    while(cin >> grade) {
-        if(grade <= 100) {
-            n = grade / 10;
-            i = 0;
-            for(auto beg = scores.begin();
-            beg != scores.end(); beg++, i++) {
-                if(i == n) {
-                    ++*beg;
-                }
-            }
-        }
-    }
+    char st[11] = "fundamenta";
 
-    for(auto s : scores) {
-        cout << s << endl;
-    }
 
     return 0;
 }

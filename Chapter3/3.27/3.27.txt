@@ -1,0 +1,11 @@
+Assuming txt_size is a function that takes no arguments and returns an int value, which of the following definitions
+are illegal? Explain why.
+unsigned buf_size = 1024;
+(a) int ia[buf_size]; //illegal, arrays must be initialized with a constexpr
+(b) int ia[4 * 7 - 14]; //legal, produces an array of size 14
+(c) int ia[txt_size()]; //illegal, txt_size() is not a constexpr function so the result may not be produced at
+compile time
+(d) char st[11] = "fundamental"; //illegal, char array needs an empty character at end. Fundemental is 11 characters,
+so one too long. 
+
+Lippman, Stanley B.; Stanley Lippman; Barbara Moo. C++ Primer (p. 115). Pearson Education. Kindle Edition.
