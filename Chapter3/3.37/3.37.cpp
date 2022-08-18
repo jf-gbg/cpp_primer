@@ -6,7 +6,6 @@ using std::begin;
 using std::end;
 using std::size;
 
-#include <string>
 #include <cstring>
 using std::string;
 using std::strcpy;
@@ -17,7 +16,13 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-int main() {
+//prints
+//h
+//e
+//l
+//l
+//o
+int Exercise337() {
     const char ca[] = {'h','e','l','l','o'};
     const char *cp = ca;
     while (*cp) {
