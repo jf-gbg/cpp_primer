@@ -21,5 +21,4 @@ int exercise331() {
         cout << i << " ";
     }
     cout << endl;
-
 }

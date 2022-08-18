@@ -2,6 +2,8 @@
 using std::cin;
 using std::cout;
 using std::endl;
+using std::begin;
+using std::end;
 
 #include <string>
 using std::string;
@@ -16,31 +18,7 @@ string sa[10];
 int ia[10];
 
 int main() {
-    constexpr size_t arraySize = 10;
-    int ia[arraySize];
-
-    for (size_t i = 0; i < arraySize; ++i) {
-        ia[i] = i;
-    }
-
-    for (auto i : ia) {
-        cout << i << " ";
-    }
-    cout << endl;
-
+   int ia[] = {0,2,4,6,8};
+   int last = *(ia + 4);
+   cout << last << endl;
 }
-
-//42
-//65
-//95
-//100
-//39
-//67
-//95
-//76
-//88
-//76
-//83
-//92
-//76
-//93
