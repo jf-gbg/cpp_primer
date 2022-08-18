@@ -1,0 +1,9 @@
+Exercise 3.29: List some of the drawbacks of using an array instead of a vector.
+
+Arrays are fixed in size.
+Until recently, arrays needed to be initialized with a constexpr.
+Arrays cannot be copied.
+Character arrays need space for a null value.
+You cannot use bracket notationto initiate an array (10, 42).
+
+Lippman, Stanley B.; Stanley Lippman; Barbara Moo. C++ Primer (p. 115). Pearson Education. Kindle Edition.
