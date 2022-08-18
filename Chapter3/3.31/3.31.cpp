@@ -9,9 +9,6 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-string sa[10];
-int ia[10];
-
 int exercise331() {
     constexpr size_t arraySize = 10;
     int ia[arraySize];
