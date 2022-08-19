@@ -17,7 +17,7 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-int main() {
+int Exercise340() {
     const char ca[] = "Hello";
     const char ca2[] = "There!";
 
