@@ -17,10 +17,9 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-int main() {
+int Exercise341() {
     int int_arr[] = {0,1,2,3,4,5};
     vector<int> ivec(begin(int_arr), end(int_arr ));
-
 
     for (auto c : ivec) {
         cout << c << endl;
