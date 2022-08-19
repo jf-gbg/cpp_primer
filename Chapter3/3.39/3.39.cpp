@@ -1,5 +1,4 @@
 #include <iostream>
-using std::cin;
 using std::cout;
 using std::endl;
 using std::begin;
@@ -9,7 +8,7 @@ using std::size;
 #include <string>
 #include <cstring>
 using std::string;
-using std::strcpy;
+
 
 #include <cctype>
 using std::isspace;
@@ -17,12 +16,12 @@ using std::isspace;
 #include <vector>
 using std::vector;
 
-int main() {
-    string string1 = "hello", string2 = "hello";
+int Exercise339() {
+    string string1 = "hello", string2 = "goodbye";
     bool stringsAreEqual = true;
 
     const char ca1[] = "hello";
-    const char ca2[] = "hello";
+    const char ca2[] = "goodbye";
     bool cStringsAreEqual = true;
 
     if(strcmp(ca1,ca2) < 0 || strcmp(ca1, ca2) > 0)
