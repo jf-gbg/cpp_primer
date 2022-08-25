@@ -1,23 +1,10 @@
 #include <iostream>
-using std::cin;
 using std::cout;
 using std::endl;
 using std::begin;
 using std::end;
-using std::size;
 
-#include <string>
-#include <cstring>
-using std::string;
-using std::strcpy;
-
-#include <cctype>
-using std::isspace;
-
-#include <vector>
-using std::vector;
-
-int main() {
+int exercise343() {
     constexpr size_t rowCnt = 3, colCnt = 4;
     int ia[rowCnt][colCnt];
 

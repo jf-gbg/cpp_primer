@@ -21,7 +21,7 @@ int main() {
     for (auto i : intArr) {
         cout << i << " ";
     }
-
     cout << endl;
+
     return 0;
 }
